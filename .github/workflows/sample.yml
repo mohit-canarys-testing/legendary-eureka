@@ -1,4 +1,4 @@
-name: Sequential job workflow
+name: Sequential workflow
 
 on:
     push:
