@@ -1,4 +1,4 @@
-name: Job-B
+name: 2nd Job
 
 on:
     push:
