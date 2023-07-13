@@ -24,3 +24,9 @@ jobs:
 
       - name: Publish
         run: dotnet build --no-restore -c Release
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-repo-artifact
+          path: ./
