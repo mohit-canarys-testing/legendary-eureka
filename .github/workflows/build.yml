@@ -1,4 +1,4 @@
-name: Build App
+name: Build .net Application
 on:
   push:
   workflow_call:
