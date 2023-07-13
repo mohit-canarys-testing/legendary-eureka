@@ -1,16 +1,21 @@
-name: Deploy .net Application
+name: Deploy App
 on:
     push:
     workflow_call:
-
 jobs:
-   
- deploy:
-      name: deploy
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-       - name: Download Build Artifacts
-         uses: actions/download-artifact@v3
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Build App
+        uses: mohit-canarys-testing/legendary-eureka/.github/workflows/build.yml@test
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
         with:
           name: test-repo-artifact
+        
+        
