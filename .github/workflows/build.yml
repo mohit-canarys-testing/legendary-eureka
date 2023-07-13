@@ -9,10 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
-      - name: Install Dependencies
-        run: npm install
+      - name: setup dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '3.1.301'
+
+      - name: Restore Dependencies
+        run: dotnet restore
       
       - name: Build
-        run: npm run build
+        run: dotnet build --no-restore
+
+      - name: Publish
+        run: dotnet build --no-restore -c Release
