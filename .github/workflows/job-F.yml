@@ -1,0 +1,14 @@
+name: Job-F
+
+on:
+    push:
+    workflow_call:
+
+jobs:
+
+    job-F:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step 6
+              run: echo "Hello"
