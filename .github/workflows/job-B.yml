@@ -1,0 +1,14 @@
+name: Job-B
+
+on:
+    push:
+    workflow_call:
+
+jobs:
+
+    job-B:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step 2
+              run: echo "Hello Maven World"

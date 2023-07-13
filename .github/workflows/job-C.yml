@@ -1,0 +1,14 @@
+name: Job-C
+
+on:
+    push:
+    workflow_call:
+
+jobs:
+
+    job-C:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step 3
+              run: echo "Hello SpaceGame"
