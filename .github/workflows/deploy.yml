@@ -10,9 +10,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      - name: Build App
-        uses: mohit-canarys-testing/legendary-eureka/.github/workflows/build.yml@test
-
       - name: Download Build Artifacts
         uses: actions/download-artifact@v3
         with:
