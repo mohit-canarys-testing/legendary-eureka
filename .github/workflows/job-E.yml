@@ -1,0 +1,14 @@
+name: Job-E
+
+on:
+    push:
+    workflow_call:
+
+jobs:
+
+    job-E:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step 5
+              run: echo "Hello Gradle"
